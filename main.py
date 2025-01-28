@@ -14,7 +14,7 @@ while running:
         back=pygame.image.load('back1.png')
         back=pygame.transform.scale(back,(800,600))
         screen.blit(back,(0,0))
-        pygame.draw.line(screen,(0,255,0),(0,520),(1000,520),6)
+        pygame.draw.line(screen,(200,0,0),(0,517),(1000,517),6)
 
         """ pygame.draw.circle(screen,blue,(500,400),50)
         font=pygame.font.Font(None,50)
@@ -24,6 +24,10 @@ while running:
         player=pygame.image.load('player.png')
         player=pygame.transform.scale(player,(100,125))
         screen.blit(player,(100,390))
-        
+        if event.type==pygame.MOUSEBUTTONDOWN:
+                    pygame.draw.line(screen,(0,255,0),(0,517),(1000,517),6)
+
+
+
         pygame.display.flip()
 pygame.quit()
