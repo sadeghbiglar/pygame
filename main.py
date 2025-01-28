@@ -11,9 +11,13 @@ while running:
         if event.type==pygame.QUIT:
             running=False
         screen.fill((255,255,0))
+        back=pygame.image.load('back.jpg')
+        back=pygame.transform.scale(back,(800,600))
+        screen.blit(back,(0,0))
         pygame.draw.circle(screen,blue,(500,400),50)
         font=pygame.font.Font(None,50)
         text=font.render("step1",True,(0,0,0))
         screen.blit(text,(100,100))
+        
         pygame.display.flip()
 pygame.quit()
